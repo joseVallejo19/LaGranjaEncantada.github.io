@@ -1,5 +1,10 @@
-﻿body
+﻿body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html
 {
+    height: 100%;
 }
 .land {
     height: 100vh;
@@ -11,4 +16,89 @@
 }
 .list{
     list-style-type: none;
+}
+.jabtn {
+    height: 5vh;
+    width: 20vh;
+    border-radius: 10px;
+    background-color: gold;
+    font-size: 24px;
+    transition: 0.5s;
+    border: none;
+}
+    .jabtn:hover {
+        height: 6vh;
+        width: 23vh;
+    }
+.carta {
+    height: 50vh;
+    transition: 0.5s;
+}
+    .carta:hover {
+        transform: translateY(-15px);
+    }
+.redes {
+    height: 5vh;
+    background-color: darkolivegreen
+}
+.legal{
+    text-align:center;
+    font-size: 1vh;
+}
+.caja {
+    background-color: transparent;
+    color: white;
+    display: inline-block;
+    position: fixed;
+    bottom: 15%;
+    right: 15%;
+    height: auto;
+    text-align: right;
+}
+
+.barra {
+    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+}
+.imagen {
+    width: 200px;
+    transition: 0.5s;
+    filter: grayscale(100%);
+}
+
+    .imagen:hover {
+        filter: grayscale(0%);
+        width: 300px;
+    }
+.bgAbout {
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.pato {
+    --a: 8deg; /* control the angle of rotation (the smaller, the better) */
+    width: 250px;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    transform: perspective(400px) rotate3d(var(--r,1,-1),0,calc(var(--i,1)*var(--a)));
+    -webkit-mask: linear-gradient(135deg,#000c 40%,#000,#000c 60%) 100% 100%/250% 250%;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.alt {
+    --r: 1,1;
+    -webkit-mask: linear-gradient(45deg,#000c 40%,#000,#000c 60%) 0 100%/250% 250%;
+}
+
+.pato:hover {
+    --i: -1;
+    -webkit-mask-position: 0 0;
+}
+
+.alt:hover {
+    -webkit-mask-position: 100% 0;
 }
